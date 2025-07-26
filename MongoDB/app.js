@@ -1,6 +1,7 @@
 const express = require('express');
 const connectDB = require('./config/db');
 const epicsRoutes = require('./routes/epics');
+const projectsRoutes = require('./routes/projects');
 require('dotenv').config();
 
 const app = express();
@@ -20,6 +21,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/epics', epicsRoutes);
+app.use('/api/projects', projectsRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

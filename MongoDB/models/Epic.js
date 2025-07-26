@@ -3,11 +3,11 @@ const mongoose = require('mongoose');
 const epicSchema = new mongoose.Schema({
     user_id: {
         type: String,
-        required: true
+        default: 'pending'
     },
     project_id: {
         type: String,
-        required: true
+        default: 'pending'
     },
     effort: {
         type: String,
